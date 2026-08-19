@@ -1,0 +1,1 @@
+# dir_khir_otawakal_3ala_lah
