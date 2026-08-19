@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brahim Flow - نسخة مجانية من Google Flow</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Top Bar مثل Google Flow -->
+<div class="topbar">
+  <div class="left"><span class="logo">🌊 Brahim Flow</span><span class="free-badge">مجاني 100% • بلا حدود</span></div>
+  <div class="right"><button class="icon-btn">🔔</button><button class="icon-btn">⚙️</button><div class="avatar">ب</div></div>
+</div>
+
+<div class="main">
+  <!-- Sidebar يسار مثل Flow -->
+  <aside class="sidebar">
+    <div class="tool active">🎬 <span>نص إلى فيديو</span><small>Veo 3 FREE</small></div>
+    <div class="tool">🖼️ <span>إطارات إلى فيديو</span><small>Frames</small></div>
+    <div class="tool">🧩 <span>مكونات إلى فيديو</span><small>Ingredients</small></div>
+    <div class="tool">🎨 <span>صور - Imagen 4</span><small>FREE</small></div>
+    <div class="tool">📺 <span>Flow TV</span><small>إلهام</small></div>
+    <hr>
+    <div class="section-title">مشاريعك</div>
+    <div class="project">🎥 فيديو مراكش - 1 دقيقة</div>
+    <div class="project">📸 صور براهيم</div>
+  </aside>
+
+  <!-- Center مثل Google Flow -->
+  <section class="center">
+    <div id="videoPlayer" class="player">
+      <div class="ph">▶️<br>الفيديو سيظهر هنا<br><small>اكتب وصف واضغط Enter</small></div>
+    </div>
+
+    <!-- Storyboard Timeline مثل Flow -->
+    <div class="timeline">
+      <div class="timeline-head"><span>Storyboard - حتى 1 ساعة</span><button id="addScene">+ مشهد</button></div>
+      <div class="scenes" id="scenes">
+        <div class="scene active"><div class="thumb">مشهد 1</div><span>5ث</span></div>
+        <div class="scene"><div class="thumb">مشهد 2</div><span>5ث</span></div>
+        <div class="scene"><div class="thumb">+ جديد</div><span></span></div>
+      </div>
+    </div>
+
+    <!-- Prompt Bar تحت مثل Flow -->
+    <div class="prompt-bar">
+      <input id="promptInput" type="text" placeholder="اكتب وصف المشهد هنا... مثلا: شاب مغربي يمشي في مراكش، تصوير سينمائي...">
+      <select id="dur"><option>5ث</option><option>15ث</option><option>30ث</option><option>1 دقيقة</option><option>1 ساعة</option></select>
+      <button id="genBtn" class="genBtn">توليد مجاني 🚀</button>
+    </div>
+  </section>
+
+  <!-- Right Panel مثل Flow -->
+  <aside class="rightbar">
+    <h4>إعدادات الكاميرا</h4>
+    <label>حركة</label><select><option>ثابتة</option><option>Pan يمين</option><option>Tilt فوق</option><option>Zoom in</option></select>
+    <label>نسبة العرض</label><select><option>16:9 يوتيوب</option><option>9:16 تيكتوك</option><option>1:1</option></select>
+    <label>الجودة</label><select><option>1080p مجاني</option><option>4K مجاني</option></select>
+    <hr>
+    <h4>المكونات</h4>
+    <div class="ingredients">+ أضف صورة / شخصية</div>
+    <div id="progress" class="hidden"><div class="bar"><div id="fill"></div></div><p id="pText">0%</p></div>
+    <button id="dlBtn" class="dl hidden">⬇️ تحميل MP4 مجاني</button>
+    <p class="note">هذا بديل مجاني 100% لـ Google Flow. Veo3 الأصلي مدفوع، هنا نستعمل Stable Video Diffusion + Flux مفتوح المصدر.</p>
+  </aside>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
